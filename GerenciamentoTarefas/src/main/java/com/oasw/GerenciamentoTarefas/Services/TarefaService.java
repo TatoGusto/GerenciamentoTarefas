@@ -13,7 +13,7 @@ public class TarefaService {
     @Autowired
     TarefaRepository tarefaRepository;
 
-    public TarefaModel create(TarefaModel tarefaModel){
+    public TarefaModel createTarefa(TarefaModel tarefaModel){
         return tarefaRepository.save(tarefaModel);
     }
 
