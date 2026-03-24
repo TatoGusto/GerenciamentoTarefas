@@ -18,7 +18,7 @@ public class TarefaController {
     TarefaService tarefaService;
 
     @PostMapping
-    public ResponseEntity<TarefaModel> createTarefa(TarefaModel tarefaModel){
+    public ResponseEntity<TarefaModel> createTarefa(@RequestBody TarefaModel tarefaModel){
         TarefaModel request = tarefaService.createTarefa(tarefaModel);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(tarefaModel.getId()).toUri();
